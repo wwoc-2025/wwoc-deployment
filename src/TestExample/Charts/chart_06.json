@@ -1,0 +1,414 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "background": "#f9f9f9",
+  "padding": 5,
+  "width": 500,
+  "height": 500,
+  "style": "cell",
+  "data": [
+    {
+      "name": "data-625f82b3e8fb323b0b8ba36a660244c4",
+      "values": [
+        {
+          "albumName": "1989 (Taylor's Version)",
+          "emotion": "Fear",
+          "count": 1,
+          "emotion_rank": 4
+        },
+        {
+          "albumName": "1989 (Taylor's Version)",
+          "emotion": "Heartbreak",
+          "count": 13,
+          "emotion_rank": 1
+        },
+        {
+          "albumName": "1989 (Taylor's Version)",
+          "emotion": "Joy",
+          "count": 2,
+          "emotion_rank": 3
+        },
+        {
+          "albumName": "1989 (Taylor's Version)",
+          "emotion": "Love",
+          "count": 6,
+          "emotion_rank": 2
+        },
+        {
+          "albumName": "Fearless (Taylor's Version)",
+          "emotion": "Heartbreak",
+          "count": 16,
+          "emotion_rank": 1
+        },
+        {
+          "albumName": "Fearless (Taylor's Version)",
+          "emotion": "Hope",
+          "count": 1,
+          "emotion_rank": 3
+        },
+        {
+          "albumName": "Fearless (Taylor's Version)",
+          "emotion": "Joy",
+          "count": 1,
+          "emotion_rank": 4
+        },
+        {
+          "albumName": "Fearless (Taylor's Version)",
+          "emotion": "Love",
+          "count": 9,
+          "emotion_rank": 2
+        },
+        {
+          "albumName": "Lover",
+          "emotion": "Anger",
+          "count": 2,
+          "emotion_rank": 3
+        },
+        {
+          "albumName": "Lover",
+          "emotion": "Heartbreak",
+          "count": 8,
+          "emotion_rank": 1
+        },
+        {
+          "albumName": "Lover",
+          "emotion": "Indifference",
+          "count": 1,
+          "emotion_rank": 4
+        },
+        {"albumName": "Lover", "emotion": "Joy", "count": 1, "emotion_rank": 5},
+        {
+          "albumName": "Lover",
+          "emotion": "Love",
+          "count": 6,
+          "emotion_rank": 2
+        },
+        {
+          "albumName": "Midnights (3am Edition)",
+          "emotion": "Anger",
+          "count": 1,
+          "emotion_rank": 3
+        },
+        {
+          "albumName": "Midnights (3am Edition)",
+          "emotion": "Heartbreak",
+          "count": 13,
+          "emotion_rank": 1
+        },
+        {
+          "albumName": "Midnights (3am Edition)",
+          "emotion": "Love",
+          "count": 6,
+          "emotion_rank": 2
+        },
+        {
+          "albumName": "Red (Taylor's Version)",
+          "emotion": "Heartbreak",
+          "count": 21,
+          "emotion_rank": 1
+        },
+        {
+          "albumName": "Red (Taylor's Version)",
+          "emotion": "Joy",
+          "count": 2,
+          "emotion_rank": 3
+        },
+        {
+          "albumName": "Red (Taylor's Version)",
+          "emotion": "Love",
+          "count": 8,
+          "emotion_rank": 2
+        },
+        {
+          "albumName": "Speak Now (Taylor's Version)",
+          "emotion": "Anger",
+          "count": 2,
+          "emotion_rank": 3
+        },
+        {
+          "albumName": "Speak Now (Taylor's Version)",
+          "emotion": "Heartbreak",
+          "count": 11,
+          "emotion_rank": 1
+        },
+        {
+          "albumName": "Speak Now (Taylor's Version)",
+          "emotion": "Joy",
+          "count": 1,
+          "emotion_rank": 4
+        },
+        {
+          "albumName": "Speak Now (Taylor's Version)",
+          "emotion": "Love",
+          "count": 9,
+          "emotion_rank": 2
+        },
+        {
+          "albumName": "THE TORTURED POETS DEPARTMENT: THE ANTHOLOGY",
+          "emotion": "Anger",
+          "count": 2,
+          "emotion_rank": 3
+        },
+        {
+          "albumName": "THE TORTURED POETS DEPARTMENT: THE ANTHOLOGY",
+          "emotion": "Fear",
+          "count": 1,
+          "emotion_rank": 4
+        },
+        {
+          "albumName": "THE TORTURED POETS DEPARTMENT: THE ANTHOLOGY",
+          "emotion": "Heartbreak",
+          "count": 45,
+          "emotion_rank": 1
+        },
+        {
+          "albumName": "THE TORTURED POETS DEPARTMENT: THE ANTHOLOGY",
+          "emotion": "Love",
+          "count": 13,
+          "emotion_rank": 2
+        },
+        {
+          "albumName": "THE TORTURED POETS DEPARTMENT: THE ANTHOLOGY",
+          "emotion": "Sadness",
+          "count": 1,
+          "emotion_rank": 5
+        },
+        {
+          "albumName": "Taylor Swift (Deluxe)",
+          "emotion": "Anger",
+          "count": 1,
+          "emotion_rank": 3
+        },
+        {
+          "albumName": "Taylor Swift (Deluxe)",
+          "emotion": "Heartbreak",
+          "count": 9,
+          "emotion_rank": 1
+        },
+        {
+          "albumName": "Taylor Swift (Deluxe)",
+          "emotion": "Love",
+          "count": 5,
+          "emotion_rank": 2
+        },
+        {
+          "albumName": "evermore (deluxe version)",
+          "emotion": "Anger",
+          "count": 1,
+          "emotion_rank": 3
+        },
+        {
+          "albumName": "evermore (deluxe version)",
+          "emotion": "Heartbreak",
+          "count": 14,
+          "emotion_rank": 1
+        },
+        {
+          "albumName": "evermore (deluxe version)",
+          "emotion": "Love",
+          "count": 2,
+          "emotion_rank": 2
+        },
+        {
+          "albumName": "evermore (deluxe version)",
+          "emotion": "Sadness",
+          "count": 1,
+          "emotion_rank": 4
+        },
+        {
+          "albumName": "folklore (deluxe version)",
+          "emotion": "Anger",
+          "count": 1,
+          "emotion_rank": 3
+        },
+        {
+          "albumName": "folklore (deluxe version)",
+          "emotion": "Heartbreak",
+          "count": 15,
+          "emotion_rank": 1
+        },
+        {
+          "albumName": "folklore (deluxe version)",
+          "emotion": "Love",
+          "count": 2,
+          "emotion_rank": 2
+        },
+        {
+          "albumName": "reputation",
+          "emotion": "Anger",
+          "count": 1,
+          "emotion_rank": 3
+        },
+        {
+          "albumName": "reputation",
+          "emotion": "Defiance",
+          "count": 1,
+          "emotion_rank": 4
+        },
+        {
+          "albumName": "reputation",
+          "emotion": "Heartbreak",
+          "count": 5,
+          "emotion_rank": 2
+        },
+        {
+          "albumName": "reputation",
+          "emotion": "Love",
+          "count": 9,
+          "emotion_rank": 1
+        }
+      ]
+    },
+    {
+      "name": "data_0",
+      "source": "data-625f82b3e8fb323b0b8ba36a660244c4",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["albumName", "emotion", "emotion_rank"],
+          "ops": ["sum"],
+          "fields": ["count"],
+          "as": ["sum_count"]
+        },
+        {
+          "type": "stack",
+          "groupby": ["albumName"],
+          "field": "sum_count",
+          "sort": {"field": ["emotion_rank"], "order": ["ascending"]},
+          "as": ["sum_count_start", "sum_count_end"],
+          "offset": "normalize"
+        },
+        {
+          "type": "filter",
+          "expr": "isValid(datum[\"sum_count\"]) && isFinite(+datum[\"sum_count\"])"
+        }
+      ]
+    }
+  ],
+  "marks": [
+    {
+      "name": "marks",
+      "type": "rect",
+      "style": ["bar"],
+      "from": {"data": "data_0"},
+      "encode": {
+        "update": {
+          "fill": {"scale": "color", "field": "emotion"},
+          "tooltip": {
+            "signal": "{\"albumName\": isValid(datum[\"albumName\"]) ? datum[\"albumName\"] : \"\"+datum[\"albumName\"], \"emotion\": isValid(datum[\"emotion\"]) ? datum[\"emotion\"] : \"\"+datum[\"emotion\"], \"Sum of count\": format(datum[\"sum_count\"], \"\")}"
+          },
+          "ariaRoleDescription": {"value": "bar"},
+          "description": {
+            "signal": "\"Proportion of Songs: \" + (format(datum[\"sum_count_end\"]-datum[\"sum_count_start\"], \".0%\")) + \"; Album: \" + (isValid(datum[\"albumName\"]) ? datum[\"albumName\"] : \"\"+datum[\"albumName\"]) + \"; emotion: \" + (isValid(datum[\"emotion\"]) ? datum[\"emotion\"] : \"\"+datum[\"emotion\"]) + \"; emotion_rank: \" + (format(datum[\"emotion_rank\"], \"\")) + \"; albumName: \" + (isValid(datum[\"albumName\"]) ? datum[\"albumName\"] : \"\"+datum[\"albumName\"]) + \"; Sum of count: \" + (format(datum[\"sum_count\"], \"\"))"
+          },
+          "x": {"scale": "x", "field": "sum_count_end"},
+          "x2": {"scale": "x", "field": "sum_count_start"},
+          "y": {"scale": "y", "field": "albumName"},
+          "height": {"signal": "max(0.25, bandwidth('y'))"}
+        }
+      }
+    }
+  ],
+  "scales": [
+    {
+      "name": "x",
+      "type": "linear",
+      "domain": [0, 1],
+      "range": [0, {"signal": "width"}],
+      "nice": true,
+      "zero": true
+    },
+    {
+      "name": "y",
+      "type": "band",
+      "domain": {"data": "data_0", "field": "albumName", "sort": true},
+      "range": [0, {"signal": "height"}],
+      "paddingInner": 0.1,
+      "paddingOuter": 0.05
+    },
+    {
+      "name": "color",
+      "type": "ordinal",
+      "domain": {"data": "data_0", "field": "emotion", "sort": true},
+      "range": "category"
+    }
+  ],
+  "axes": [
+    {
+      "scale": "x",
+      "orient": "bottom",
+      "gridScale": "y",
+      "grid": true,
+      "tickCount": {"signal": "ceil(width/40)"},
+      "domain": false,
+      "labels": false,
+      "aria": false,
+      "maxExtent": 0,
+      "minExtent": 0,
+      "ticks": false,
+      "zindex": 0
+    },
+    {
+      "scale": "x",
+      "orient": "bottom",
+      "grid": false,
+      "title": "Proportion of Songs",
+      "format": ".0%",
+      "labelFlush": true,
+      "labelOverlap": true,
+      "tickCount": {"signal": "ceil(width/40)"},
+      "zindex": 0
+    },
+    {
+      "scale": "y",
+      "orient": "left",
+      "grid": false,
+      "title": "Album",
+      "zindex": 0
+    }
+  ],
+  "legends": [{"orient": "right", "title": "Emotion", "fill": "color"}],
+  "config": {
+    "path": {"stroke": "#ab5787"},
+    "shape": {"stroke": "#ab5787"},
+    "symbol": {"fill": "#ab5787", "size": 30},
+    "range": {
+      "category": [
+        "#ab5787",
+        "#51b2e5",
+        "#703c5c",
+        "#168dd9",
+        "#d190b6",
+        "#00609f",
+        "#d365ba",
+        "#154866",
+        "#666666",
+        "#c4c4c4"
+      ]
+    },
+    "axis": {
+      "domainColor": "#979797",
+      "domainWidth": 0.5,
+      "gridWidth": 0.2,
+      "labelColor": "#979797",
+      "tickColor": "#979797",
+      "tickWidth": 0.2,
+      "titleColor": "#979797"
+    },
+    "axisBand": {"grid": false},
+    "axisX": {"grid": true, "tickSize": 10},
+    "axisY": {"domain": false, "grid": true, "tickSize": 0},
+    "legend": {
+      "labelFontSize": 11,
+      "padding": 1,
+      "symbolSize": 30,
+      "symbolType": "square"
+    },
+    "style": {
+      "arc": {"fill": "#ab5787"},
+      "area": {"fill": "#ab5787"},
+      "line": {"stroke": "#ab5787"},
+      "rect": {"fill": "#ab5787"}
+    }
+  },
+  "usermeta": {"embedOptions": {"theme": "quartz"}}
+}

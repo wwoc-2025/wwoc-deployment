@@ -1,0 +1,606 @@
+// ===================================================================
+// GLOBAL RESET & BOX MODEL
+// Set standard box-sizing and global resets for consistent styling
+// ===================================================================
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:global(html), :global(body) {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  width: 100%;
+}
+
+:global(body) {
+  font-family: 'Figtree', sans-serif;
+  position: relative;
+}
+
+// ===================================================================
+// TYPOGRAPHY
+// Global typography settings for headings and base text
+// ===================================================================
+:global(h1), :global(h2), :global(h3), :global(h4), :global(h5), :global(h6) {
+  font-family: 'Instrument Serif', serif;
+}
+
+// ===================================================================
+// GRAPHIC CONTAINER 
+// Main container for visualizations in scrollytelling sections
+// ===================================================================
+.graphic {
+  background-color: #f9f9f9;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+.number {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 900;
+  font-size: 2rem;
+}
+
+// ===================================================================
+// CHART CONTAINER AND INFO
+// Styling for chart visualizations and explanatory text
+// ===================================================================
+.chart-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.chart-title {
+  margin: 0 0 0.625rem 0;
+  font-size: 1.4rem;
+  color: #333;
+}
+
+.chart-description {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #555;
+}
+
+.chart-info {
+  position: absolute;
+  top: 3.125rem;
+  max-width: 21.875rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 0.9375rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+// Alignment variations for chart info cards
+.chart-info.align-left {
+  left: 5%;
+  right: auto;
+}
+
+.chart-info.align-right {
+  right: 5%;
+  left: auto;
+}
+
+.chart-info.align-center {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+// ===================================================================
+// FULLSCREEN LAYOUTS
+// Full viewport height sections for chapter transitions
+// ===================================================================
+.fullscreen-chapter {
+  height: 100vh;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.black-bg {
+  background-color: #000;
+  color: #fff;
+}
+
+.beige-bg {
+  background-color: #f5f5dc;
+  color: #000;
+}
+
+// ===================================================================
+// INITIAL STATE
+// Styling for the initial view before scrolling begins
+// ===================================================================
+.initial-state {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: #f9f9f9;
+}
+
+.initial-state p {
+  font-family: 'Instrument Serif', serif;
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.1);
+}
+
+// ===================================================================
+// FULLSCREEN IMAGE
+// Full viewport image display for visual sections
+// ===================================================================
+.fullscreen-image {
+  width: 100%; /* Changed from 100vw to prevent horizontal overflow */
+  height: 100vh; 
+  object-fit: cover; 
+  object-position: center;
+}
+
+.fullscreen-image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Changed from 100vw to prevent horizontal overflow */
+  height: 100vh; 
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9f9;
+}
+
+// ===================================================================
+// CHAPTER CONTENT
+// Typography and content styling within chapter sections
+// ===================================================================
+.chapter-content {
+  width: 80%;
+  max-width: 50rem;
+}
+
+.chapter-content h2 {
+  font-size: 2em;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.chapter-content p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+.fullscreen-chapter h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-family: 'Instrument Serif', serif !important;
+  font-weight: 500;
+}
+
+.fullscreen-chapter ul {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-family: 'Figtree', sans-serif;
+  font-weight: 400;
+}
+
+.fullscreen-chapter li {
+  margin-bottom: 0.5rem;
+}
+
+// ===================================================================
+// HEADER SECTION
+// Hero section with background image and title overlay
+// ===================================================================
+.header-image {
+  background-image: url('../src/TestExample/Images/placeholder-19201080.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.header-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+  max-width: 80%;
+}
+
+.main-title {
+  font-family: 'Instrument Serif', serif !important;
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.5);
+}
+
+.sub-title {
+  font-family: 'Fira Sans', sans-serif !important;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-top: 0;
+  text-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.5);
+}
+
+// ===================================================================
+// IMAGE BACKGROUNDS
+// Background image sections with overlay for readability
+// ===================================================================
+.image-bg {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.image-bg .chapter-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.5);
+}
+
+.image-bg .chapter-content h2 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.image-bg .chapter-content p {
+  font-size: 1.5rem;
+  max-width: 37.5rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+// ===================================================================
+// CONTENT CONTAINERS
+// Standard content container for consistent layout
+// ===================================================================
+.content-container {
+  width: 80%;
+  max-width: 50rem;
+  margin: 3.75rem auto;
+  padding: 0 1.25rem;
+}
+
+.fullscreen-chapter .content-container {
+  margin: 0 auto;
+}
+
+.content-paragraph {
+  font-family: 'Figtree', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0 0 1.25rem 0;
+}
+
+// ===================================================================
+// IMAGE LAYOUT
+// Floated image with text wrapping
+// ===================================================================
+.image-left {
+  float: left;
+  width: 50%;
+  margin: 0 1.25rem 1.25rem 0;
+}
+
+.image-left img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.content-container::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+// ===================================================================
+// ALBUM HEADER COMPONENTS
+// Grid-based layout for album covers in header section
+// ===================================================================
+.album-header {
+  overflow: hidden;
+}
+
+.header-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.album-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.3125rem;
+  height: 100%;
+  padding: 0.625rem;
+  box-sizing: border-box;
+  width: 50%;
+}
+
+.title-container {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+}
+
+.title-container h1 {
+  font-size: 4rem;
+  line-height: 1.2;
+  color: #000;
+  font-weight: bold;
+  font-family: 'Fleur De Leah', cursive !important;
+}
+
+.album {
+  aspect-ratio: 1/1;
+  overflow: hidden;
+}
+
+.album img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.album img:hover {
+  transform: scale(1.05);
+}
+
+// ===================================================================
+// MAP CHAPTER STYLES
+// Specific styling for map visualization sections
+// ===================================================================
+.map-chapter {
+  background-color: #f8f8f8;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.map-container {
+  width: 90%;
+  max-width: 75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.map-container h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #333;
+}
+
+// ===================================================================
+// FOOTER STYLING
+// Site footer with distinctive monospace font
+// ===================================================================
+.site-footer {
+  background-color: #000;
+  color: #fff;
+  padding: 3.75rem 0;
+  width: 100%;
+  font-family: 'Space Mono', monospace;
+}
+
+.footer-container {
+  width: 80%;
+  max-width: 50rem;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.footer-content {
+  margin-bottom: 1.875rem;
+}
+
+.footer-heading {
+  font-family: 'Space Mono', monospace;
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
+  font-weight: 700;
+}
+
+.footer-text {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 0.625rem;
+  font-weight: 400;
+}
+
+.footer-links {
+  border-top: 0.0625rem solid #333;
+  padding-top: 1.25rem;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+// ===================================================================
+// SCROLLYTELLER COMPONENTS
+// Core structure for the scrollytelling experience
+// ===================================================================
+.scrollyteller {
+  position: relative;
+}
+
+// Fixed graphic container
+.graphic {
+  transform: translate3d(0, 0, 0); // Force GPU acceleration
+  height: 100vh;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+// Scrollable content container
+.content {
+  margin-top: -100vh; // Overlap with graphic
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  pointer-events: none;
+}
+
+// ===================================================================
+// RESPONSIVE BREAKPOINTS
+// Media queries for responsive design at different screen sizes
+// ===================================================================
+@media (max-width: 75rem) { // 1200px
+  .title-container h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 64rem) { // 1024px
+  :global(.right) {
+    margin-right: calc(27.5% - 24.75rem) !important;
+    width: 49.5rem !important;
+  }
+
+  :global(.left) {
+    margin-left: calc(22.5% - 24.75rem) !important;
+    width: 49.5rem !important;
+  }
+}
+
+@media (max-width: 56.25rem) { // 900px
+  .header-container {
+    flex-direction: column;
+  }
+  
+  .album-grid, .title-container {
+    width: 100%;
+  }
+  
+  .album-grid {
+    height: 60%;
+  }
+  
+  .title-container {
+    height: 40%;
+    justify-content: center;
+  }
+  
+  .title-container h1 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 48rem) { // 768px
+  .image-bg .chapter-content h2 {
+    font-size: 2.5rem;
+  }
+  
+  .image-bg .chapter-content p {
+    font-size: 1.2rem;
+  }
+  
+  .main-title {
+    font-size: 2.5rem;
+  }
+  
+  .sub-title {
+    font-size: 1.2rem;
+  }
+  
+  .footer-heading {
+    font-size: 1.2rem;
+  }
+  
+  .footer-text {
+    font-size: 0.8rem;
+  }
+  
+  .chart-container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    justify-content: center !important;
+  }
+}
+
+@media (max-width: 30rem) { // 480px
+  .album-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .title-container h1 {
+    font-size: 1.8rem;
+  }
+}
