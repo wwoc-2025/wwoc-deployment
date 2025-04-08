@@ -18,8 +18,8 @@ This project is an adaptation of the [ABC News Scrollyteller](https://github.com
 
 ```bash
 # Clone the repository
-git clone [repository-url]
-cd barnard-scrollytelling-template
+git clone [[repository-url](https://github.com/wwoc-2025/wwoc-starter)]
+cd wwoc-starter
 
 # Install dependencies
 npm install
