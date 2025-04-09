@@ -23,6 +23,7 @@
 	"devDependencies": {
 		"@sveltejs/kit": "^2.5.18",
 		"@sveltejs/package": "^2.3.2",
+		"@sveltejs/vite-plugin-svelte": "^3.0.0",
 		"concurrently": "^8.2.2",
 		"np": "^10.0.7",
 		"prettier": "^3.3.3",
@@ -34,7 +35,7 @@
 		"typescript": "^5.5.3",
 		"typescript-transform-extensions": "^1.0.1",
 		"vite": "^5.3.4"
-	},
+		},
 	"peerDependencies": {
 		"svelte": "^4.2.8"
 	},
@@ -44,10 +45,16 @@
 	"dependencies": {
 		"@abcnews/alternating-case-to-object": "^3.1.1",
 		"@abcnews/mount-utils": "^3.0.0",
-		"@abcnews/svelte-scrollyteller": "^2.1.0",
 		"vega": "^6.1.2",
 		"vega-embed": "^7.0.2",
 		"vega-lite": "^6.1.0"
+	},
+	"overrides": {
+		"glob": "^9.3.5",
+		"rimraf": "^5.0.1",
+		"inflight": "^2.0.0",
+		"cookie": "^0.7.0",
+		"esbuild": "^0.25.0"
 	},
 	"type": "module",
 	"main": "./dist/index.js",
