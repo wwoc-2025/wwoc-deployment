@@ -731,7 +731,7 @@
       "transform": [
         {
           "type": "filter",
-          "expr": "isValid(datum[\"total\"]) && isFinite(+datum[\"total\"]) && isValid(datum[\"longitude\"]) && isFinite(+datum[\"longitude\"]) && isValid(datum[\"latitude\"]) && isFinite(+datum[\"latitude\"])"
+          "expr": "isValid(datum[\"total\"]) && isFinite(+datum[\"total\"]) && isValid(datum[\"Renewable\"]) && isFinite(+datum[\"Renewable\"]) && isValid(datum[\"Natural Gas\"]) && isFinite(+datum[\"Natural Gas\"])"
         }
       ]
     }
@@ -740,32 +740,23 @@
     {
       "name": "marks",
       "type": "symbol",
-      "style": ["circle"],
+      "style": ["point"],
+      "sort": {"field": ["datum[\"total\"]"], "order": ["descending"]},
       "from": {"data": "data_0"},
       "encode": {
         "update": {
-          "opacity": {"value": 0.7},
-          "fill": {"value": "#4c78a8"},
-          "ariaRoleDescription": {"value": "circle"},
-          "description": {
-            "signal": "\"total: \" + (format(datum[\"total\"], \"\")) + \"; longitude: \" + (format(datum[\"longitude\"], \"\")) + \"; latitude: \" + (format(datum[\"latitude\"], \"\"))"
+          "opacity": {"value": 0.5},
+          "fill": {"scale": "color", "field": "Region"},
+          "tooltip": {
+            "signal": "{\"State Name\": isValid(datum[\"State Name\"]) ? datum[\"State Name\"] : \"\"+datum[\"State Name\"], \"total\": format(datum[\"total\"], \"\"), \"Natural Gas\": format(datum[\"Natural Gas\"], \"\"), \"Renewable\": format(datum[\"Renewable\"], \"\")}"
           },
-          "x": [
-            {
-              "test": "!isValid(datum[\"longitude\"]) || !isFinite(+datum[\"longitude\"])",
-              "value": 0
-            },
-            {"scale": "x", "field": "longitude"}
-          ],
-          "y": [
-            {
-              "test": "!isValid(datum[\"latitude\"]) || !isFinite(+datum[\"latitude\"])",
-              "field": {"group": "height"}
-            },
-            {"scale": "y", "field": "latitude"}
-          ],
-          "size": {"scale": "size", "field": "total"},
-          "shape": {"value": "circle"}
+          "ariaRoleDescription": {"value": "point"},
+          "description": {
+            "signal": "\"Region: \" + (isValid(datum[\"Region\"]) ? datum[\"Region\"] : \"\"+datum[\"Region\"]) + \"; total: \" + (format(datum[\"total\"], \"\")) + \"; State Name: \" + (isValid(datum[\"State Name\"]) ? datum[\"State Name\"] : \"\"+datum[\"State Name\"]) + \"; Natural Gas: \" + (format(datum[\"Natural Gas\"], \"\")) + \"; Renewable: \" + (format(datum[\"Renewable\"], \"\"))"
+          },
+          "x": {"scale": "x", "field": "Renewable"},
+          "y": {"scale": "y", "field": "Natural Gas"},
+          "size": {"scale": "size", "field": "total"}
         }
       }
     }
@@ -774,24 +765,30 @@
     {
       "name": "x",
       "type": "linear",
-      "domain": {"data": "data_0", "field": "longitude"},
+      "domain": {"data": "data_0", "field": "Renewable"},
       "range": [0, {"signal": "width"}],
-      "zero": false,
-      "nice": true
+      "nice": true,
+      "zero": true
     },
     {
       "name": "y",
       "type": "linear",
-      "domain": {"data": "data_0", "field": "latitude"},
+      "domain": {"data": "data_0", "field": "Natural Gas"},
       "range": [{"signal": "height"}, 0],
-      "zero": false,
-      "nice": true
+      "nice": true,
+      "zero": true
+    },
+    {
+      "name": "color",
+      "type": "ordinal",
+      "domain": {"data": "data_0", "field": "Region", "sort": true},
+      "range": "category"
     },
     {
       "name": "size",
       "type": "linear",
       "domain": {"data": "data_0", "field": "total"},
-      "range": [0, 361],
+      "range": [0, 1000],
       "zero": true
     }
   ],
@@ -828,7 +825,7 @@
       "scale": "x",
       "orient": "bottom",
       "grid": false,
-      "title": "longitude",
+      "title": "Renewable",
       "labelFlush": true,
       "labelOverlap": true,
       "tickCount": {"signal": "ceil(width/40)"},
@@ -838,7 +835,7 @@
       "scale": "y",
       "orient": "left",
       "grid": false,
-      "title": "latitude",
+      "title": "Natural Gas",
       "labelOverlap": true,
       "tickCount": {"signal": "ceil(height/40)"},
       "zindex": 0
@@ -846,14 +843,21 @@
   ],
   "legends": [
     {
+      "fill": "color",
+      "symbolType": "circle",
+      "title": "Region",
+      "encode": {"symbols": {"update": {"opacity": {"value": 0.5}}}}
+    },
+    {
       "size": "size",
       "symbolType": "circle",
       "title": "total",
       "encode": {
         "symbols": {
           "update": {
-            "fill": {"value": "#4c78a8"},
-            "opacity": {"value": 0.7},
+            "fill": {"value": "black"},
+            "fillOpacity": {"value": 0.5},
+            "opacity": {"value": 0.5},
             "stroke": {"value": "transparent"}
           }
         }
