@@ -6,11 +6,7 @@ on:
         environment:
           description: 'Environment to deploy to'
           required: true
-          default: 'staging'
-          type: choice
-          options:
-            - staging
-            - production
+          default: 'production'
         debug:
           description: 'Enable debug mode'
           required: false
