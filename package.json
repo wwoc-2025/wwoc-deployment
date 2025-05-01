@@ -12,7 +12,8 @@
 		"lint": "prettier --ignore-path .gitignore --check --plugin-search-dir=. .",
 		"format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. .",
 		"release": "np",
-		"version": "npm run package"
+		"version": "npm run package",
+		"deploy": "gh-pages -d build"
 	},
 	"np": {
 		"yarn": false
@@ -21,6 +22,7 @@
 		"node": ">=18"
 	},
 	"devDependencies": {
+		"@sveltejs/adapter-static": "^3.0.8",
 		"@sveltejs/kit": "^2.5.18",
 		"@sveltejs/package": "^2.3.2",
 		"@sveltejs/vite-plugin-svelte": "^3.0.0",
@@ -35,7 +37,7 @@
 		"typescript": "^5.5.3",
 		"typescript-transform-extensions": "^1.0.1",
 		"vite": "^5.3.4"
-		},
+	},
 	"peerDependencies": {
 		"svelte": "^4.2.8"
 	},
