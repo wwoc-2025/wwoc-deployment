@@ -127,7 +127,6 @@
 	onMount(() => {
 		updateVisualization(1);
 	});
-	import placeholder from './TestExample/Images/placeholder.png';
 </script>
 
 <svelte:head>
@@ -163,7 +162,11 @@
 // Opening paragraphs before scrollytelling sections
 // ===================================================================
 -->
-
+<script context="module" lang="ts">
+    import placeholder from './Images/placeholder.png';
+</script>
+  <img src={placeholder} alt="Square placeholder" />
+  
   
   
 <div class="content-container">
