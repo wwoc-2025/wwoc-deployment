@@ -162,18 +162,12 @@
 // Opening paragraphs before scrollytelling sections
 // ===================================================================
 -->
-<script context="module" lang="ts">
-    import placeholder from './Images/placeholder.png';
-</script>
-  <img src={placeholder} alt="Square placeholder" />
-  
-  
   
 <div class="content-container">
 	<p class="content-paragraph">Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
 	<p class="content-paragraph">Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
 	<div class="image-left">
-		<img src={placeholder} alt="Square placeholder" />
+		<img src="/images/placeholder.png" alt="Square placeholder" />
 		<!--<img src="../../src/TestExample/Images/placeholder.png" alt="Square placeholder" />-->
 	</div>
 	<p class="content-paragraph">Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
