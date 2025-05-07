@@ -7,6 +7,23 @@
 	import VegaChart from './VegaChart.svelte';
 	import { onMount } from 'svelte';
 
+	// Import datawrapper visualization component
+	onMount(() => {
+		// Create and load the Datawrapper scripts
+		const loadDatawrapperVis = (id) => {
+		const script = document.createElement('script');
+		script.src = `https://datawrapper.dwcdn.net/${id}/embed.js`;
+		script.defer = true;
+		script.charset = "utf-8";
+		script.setAttribute('data-target', `#datawrapper-vis-${id}`);
+		document.body.appendChild(script);
+		};
+		
+		// Load each visualization
+		loadDatawrapperVis('V8sUH');
+		loadDatawrapperVis('FkN5a');
+	});
+
 	// Import images
 	import placeholder from './Images/placeholder.png';
 	import fullscreen_placeholder from './Images/placehold-19201080-orange.png';
@@ -199,15 +216,17 @@
 // Embedded Datawrapper map visualization
 // ===================================================================
 -->
-<div style="min-height:730px" id="datawrapper-vis-V8sUH"><script type="text/javascript" defer src="https://datawrapper.dwcdn.net/V8sUH/embed.js" charset="utf-8" data-target="#datawrapper-vis-V8sUH"></script><noscript><img src="https://datawrapper.dwcdn.net/V8sUH/full.png" alt="" /></noscript></div>
-
-<div class="content-container">
-	<p class="content-paragraph">Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
-	<p class="content-paragraph">Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
-	<div style="min-height:430px" id="datawrapper-vis-FkN5a"><script type="text/javascript" defer src="https://datawrapper.dwcdn.net/FkN5a/embed.js" charset="utf-8" data-target="#datawrapper-vis-FkN5a"></script><noscript><img src="https://datawrapper.dwcdn.net/FkN5a/full.png" alt="" /></noscript></div>
-	<p></p>
-	<p class="content-paragraph">Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
-	<p class="content-paragraph">Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
+<div style="min-height:730px" id="datawrapper-vis-V8sUH">
+	<noscript><img src="https://datawrapper.dwcdn.net/V8sUH/full.png" alt="" /></noscript>
+  </div>
+  
+  <div class="content-container">
+	<p class="content-paragraph">Lorem ipsum dolor sit amet...</p>
+	<!-- Other content -->
+	
+	<div style="min-height:430px" id="datawrapper-vis-FkN5a">
+	  <noscript><img src="https://datawrapper.dwcdn.net/FkN5a/full.png" alt="" /></noscript>
+	</div>
 </div>
   
 <!-- 
