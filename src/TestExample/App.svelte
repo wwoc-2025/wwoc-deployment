@@ -9,6 +9,7 @@
 
 	// Import images
 	import placeholder from './Images/placeholder.png';
+	import fullscreen_placeholder from './Images/placehold-19201080-orange.png';
 
 	// Import chart specifications from JSON files
 	import chart01 from './Charts/chart_01.json';
@@ -209,7 +210,6 @@
 	<p class="content-paragraph">Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
 </div>
   
-  <img src={placeholder} alt="Description" />
 <!-- 
 // ===================================================================
 // SCROLLYTELLER COMPONENT
@@ -239,7 +239,8 @@
 			{:else if number === 2}
 				<!-- Section 2: Full-screen image -->
 				<div class="fullscreen-image-container">
-					<img src="../src/TestExample/Images/placehold-19201080-orange.png" alt="Full screen placeholder" class="fullscreen-image" />
+					<img src={fullscreen_placeholder} alt="fullscreen placeholder" />
+					<!--<img src="../src/TestExample/Images/placehold-19201080-orange.png" alt="Full screen placeholder" class="fullscreen-image" />-->
 				</div>
 			
 			{:else if number === 3}
