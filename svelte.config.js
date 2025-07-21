@@ -40,7 +40,6 @@ function detectRepoName() {
 const config = {
   // Add preprocess for TypeScript support
   preprocess: vitePreprocess(),
-  
   kit: {
     // Configure the static adapter with a fallback for SPA routing
     adapter: adapter({
@@ -53,11 +52,10 @@ const config = {
     // Set the base path to match your repository name
     paths: {
       // Use an environment variable in production, empty string in development
-      base: process.argv.includes('dev') 
-        ? '' 
+      base: process.argv.includes('dev')
+        ? ''
         : process.env.BASE_PATH || detectRepoName() || ''
     }
   }
 };
-
 export default config;
